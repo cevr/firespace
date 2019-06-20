@@ -2,26 +2,32 @@
     "name": "@cevr/firespace",
     "version": "0.1.0",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cevr/firespace.git"
+    },
+    "bugs": {
+        "url": "https://github.com/cevr/firespace/issues"
+    },
+    "homepage": "https://github.com/cevr/firespace",
     "module": "dist/index.esm.js",
     "files": [
         "dist",
         "src"
     ],
     "devDependencies": {
-        "@babel/plugin-proposal-class-properties": "^7.4.4",
-        "bili": "^4.8.0",
-        "rimraf": "^2.6.3",
-        "rollup-plugin-node-builtins": "^2.1.2"
+        "bili": "^4.x",
+        "firebase": "^6.x",
+        "rimraf": "^2.x"
     },
     "peerDependencies": {
-        "firebase": "^6.1.1",
-        "react": "^16.8.6"
+        "firebase": "^6.x",
+        "react": "^16.8.x"
     },
     "scripts": {
         "build": "yarn clean && bili",
         "clean": "rimraf dist"
     },
-    "dependencies": {
-        "find-up": "^4.0.0"
-    }
+    "readme": "README.md",
+    "typings": "index.d.ts"
 }
