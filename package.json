@@ -1,0 +1,27 @@
+{
+    "name": "@cevr/firespace",
+    "version": "0.1.0",
+    "license": "MIT",
+    "module": "dist/index.esm.js",
+    "files": [
+        "dist",
+        "src"
+    ],
+    "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.4.4",
+        "bili": "^4.8.0",
+        "rimraf": "^2.6.3",
+        "rollup-plugin-node-builtins": "^2.1.2"
+    },
+    "peerDependencies": {
+        "firebase": "^6.1.1",
+        "react": "^16.8.6"
+    },
+    "scripts": {
+        "build": "yarn clean && bili",
+        "clean": "rimraf dist"
+    },
+    "dependencies": {
+        "find-up": "^4.0.0"
+    }
+}
