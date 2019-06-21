@@ -1,6 +1,6 @@
 {
     "name": "@cvr/firespace",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "license": "MIT",
     "repository": {
         "type": "git",
@@ -30,5 +30,5 @@
         "prepublish": "yarn build"
     },
     "readme": "README.md",
-    "typings": "./index.d.ts"
+    "typings": "dist/index.d.ts"
 }
