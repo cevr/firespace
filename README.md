@@ -7,17 +7,17 @@
 Firespace is for developers who want to quickly develop applications using Firebase, without all of the overhead.
 
 ```
-npm install @cevr/firespace
+npm install @cvr/firespace
 ```
 
 ```
-yarn add @cevr/firespace
+yarn add @cvr/firespace
 ```
 
 **Step 1 - Set Firebase config in your root file**
 
 ```js
-import { setConfig } from '@cevr/firespace';
+import { setConfig } from '@cvr/firespace';
 
 setConfig({
     apiKey: //...,
@@ -33,7 +33,7 @@ setConfig({
 **Step 2 - Use it**
 
 ```js
-import { useSpace } from '@cevr/firespace';
+import { useSpace } from '@cvr/firespace';
 
 export default function App() {
     const [todos, space] = useSpace('todos');
