@@ -103,5 +103,7 @@ function Component() {
     space.add({ text: 'Install it', done: false });
     space.update(id, { done: true });
     space.delete(id);
+    space.loading;
+    space.error;
 }
 ```
