@@ -14,7 +14,7 @@ npm install @cvr/firespace
 yarn add @cvr/firespace
 ```
 
-**Step 1 - Set Firebase config in your root file**
+**Step 1 - Set the firebase config in your root file**
 
 ```js
 import { setConfig } from '@cvr/firespace';
@@ -89,5 +89,19 @@ function Todo({ todo, id, space }) {
             </button>
         </div>
     );
+}
+```
+
+**Simple Api**
+
+```js
+import { useSpace } from '@cvr/firespace';
+
+function Component() {
+    const [todos, space] = useSpace('todos');
+
+    space.add({ text: 'Install it', done: false });
+    space.update(id, { done: true });
+    space.delete(id);
 }
 ```
