@@ -1,16 +1,18 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
-import 'firebase/auth';
 
-let app;
+let firebaseApp;
 
-export const setConfig = config => {
-    app = firebase.initializeApp(config);
+export const setConfig = (config, name) => {
+    firebaseApp = firebase.initializeApp(config, name);
+    return firebaseApp;
 };
 
 export default function firespace(path) {
-    const database = app.database();
-    const auth = app.auth();
+    if (!firebaseApp && process.env.NODE_ENV !== 'production') {
+        throw new Error('Config not found! Did you forget to set the config?');
+    }
+    const database = firebaseApp.database();
     const ref = database.ref(path);
     const getValue = () => new Promise(resolve => ref.once('value', data => resolve(data.val())));
     return {
@@ -26,17 +28,6 @@ export default function firespace(path) {
         update: async (id, item, onComplete) => {
             ref.child(id).update(item, onComplete);
             return await getValue(ref);
-        },
-        signIn: async ({ email, password }) => {
-            const user = await auth.signInWithEmailAndPassword(email, password);
-            return user;
-        },
-        signUp: async ({ email, password }) => {
-            const user = await auth.createUserWithEmailAndPassword(email, password);
-            return user;
-        },
-        signOut: async () => {
-            await auth.signOut();
         },
     };
 }

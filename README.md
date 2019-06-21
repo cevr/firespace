@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Firespace is for developers who want to quickly develop applications using Firebase, without all of the overhead.
+Firespace is for developers who want to quickly develop applications using Firebase, without all of the overhead. Currently only targeting the firebase real time database.
 
 ```
 npm install @cvr/firespace
@@ -20,14 +20,20 @@ yarn add @cvr/firespace
 import { setConfig } from '@cvr/firespace';
 
 setConfig({
-    apiKey: //...,
-    authDomain: //...,
-    databaseURL: //...,
-    projectId: //...,
-    storageBucket: //...,
-    messagingSenderId:  //...,
-    appId: //..,
+    apiKey: '<APIKEY>',
+    databaseURL: '<DATABASEURL>',
 });
+
+// you can also extend it
+import 'firebase/auth';
+
+const firebase = setConfig({
+    apiKey: 'xx',
+    databaseURL: 'xx',
+    authDomain: 'xx',
+});
+
+const auth = firebase.auth();
 ```
 
 **Step 2 - Use it**
@@ -55,9 +61,7 @@ function AddTodo({ space }) {
             setText('');
         }
     };
-
-    const handleTextChange = e => setText(e.target.value);
-    return <input value={text} onChange={handleTextChange} placeholder="What to do next" />;
+    return <input value={text} onChange={e => setText(e.target.value);} placeholder="What to do next" />;
 }
 
 function Todos({ todos, space }) {

@@ -21,3 +21,15 @@ export function firespace(spacePath: string): Space;
 export function useSpace<State = any>(
     spacePath: string,
 ): [State, { add: add; delete: del; update: update; loading: boolean; error: null | any }];
+
+interface Config {
+    apiKey: string;
+    databaseURL: string;
+    authDomain?: string;
+    projectId?: string;
+    storageBucket?: string;
+    messagingSenderId?: string;
+    appId?: string;
+}
+
+export function setConfig(config: Config, name?: string): firebase.app.App;
