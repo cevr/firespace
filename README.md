@@ -6,6 +6,14 @@
 
 Firespace is for developers who want to quickly develop applications using Firebase, without all of the overhead.
 
+```
+npm install @cevr/firespace
+```
+
+```
+yarn add @cevr/firespace
+```
+
 **Step 1 - Set Firebase config in your root file**
 
 ```js
