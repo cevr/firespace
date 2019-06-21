@@ -1,6 +1,6 @@
 {
     "name": "@cvr/firespace",
-    "version": "0.1.0",
+    "version": "0.2.1",
     "license": "MIT",
     "repository": {
         "type": "git",
@@ -26,7 +26,8 @@
     },
     "scripts": {
         "build": "yarn clean && bili",
-        "clean": "rimraf dist"
+        "clean": "rimraf dist",
+        "prepublish": "yarn build"
     },
     "readme": "README.md",
     "typings": "index.d.ts"
