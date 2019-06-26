@@ -1,6 +1,6 @@
 {
     "name": "@cvr/firespace",
-    "version": "0.3.0-alpha.1",
+    "version": "0.3.0-alpha.2",
     "license": "MIT",
     "repository": {
         "type": "git",
@@ -16,6 +16,7 @@
         "src"
     ],
     "devDependencies": {
+        "@types/react": "^16.8.22",
         "babel-eslint": "9.x",
         "bili": "^4.x",
         "eslint": "5.x",
@@ -25,16 +26,16 @@
         "eslint-plugin-jsx-a11y": "6.x",
         "eslint-plugin-react": "7.x",
         "eslint-plugin-react-hooks": "1.x",
-        "firebase": "^6.x",
-        "react": "^16.8.x",
-        "rimraf": "^2.x"
+        "rimraf": "^2.x",
+        "rollup-plugin-typescript2": "^0.21.2",
+        "typescript": "^3.5.2"
     },
     "peerDependencies": {
         "firebase": "^6.x",
         "react": "^16.8.x"
     },
     "scripts": {
-        "build": "yarn clean && bili && cp index.d.ts dist",
+        "build": "yarn clean && bili",
         "clean": "rimraf dist",
         "prepublish": "yarn build"
     },
