@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 -   Promise based API with all space methods (add, delete, update)
--   Second parameter to `useSpace`. Expects a function that receives the firebase `ref` and returns a `Reference` or a `Query`
+-   Second parameter to `useSpace`. Expects a function that receives the firebase `Reference` and returns a `Reference` or a `Query`
 -   Better TS types.
 -   A Changelog
 
