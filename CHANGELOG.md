@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Tests
 
+## [0.3.1] - 2019-06-26
+
+### Added
+
+-   CommonJS format
+
 ## [0.3.0] - 2019-06-26
 
 ### Added
