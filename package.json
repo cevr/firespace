@@ -1,6 +1,6 @@
 {
     "name": "@cvr/firespace",
-    "version": "0.3.0-beta.2",
+    "version": "0.3.0",
     "license": "MIT",
     "repository": {
         "type": "git",
@@ -25,6 +25,8 @@
         "eslint-plugin-jsx-a11y": "6.x",
         "eslint-plugin-react": "7.x",
         "eslint-plugin-react-hooks": "1.x",
+        "firebase": "^6.2.3",
+        "react": "^16.8.6",
         "rimraf": "^2.x",
         "rollup-plugin-typescript2": "^0.21.2",
         "typescript": "^3.5.2"
