@@ -100,13 +100,14 @@ import { useSpace } from '@cvr/firespace';
 function Component() {
     const [todos, space] = useSpace('todos');
 
-    space.add({ text: 'Install it', done: false });
-    space.update(id, { done: true });
-    space.delete(id);
+    const id = await space.add({ text: 'Install it', done: false });
+    await space.update(id, { done: true });
+    await space.delete(id);
     space.loading;
     space.error;
 }
 ```
 
 ### Try it
+
 [![Edit admiring-fermi-uric7](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/admiring-fermi-uric7?fontsize=14)
