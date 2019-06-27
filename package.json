@@ -1,6 +1,6 @@
 {
     "name": "@cvr/firespace",
-    "version": "0.3.0-alpha.5",
+    "version": "0.3.0-alpha.6",
     "license": "MIT",
     "repository": {
         "type": "git",
@@ -12,8 +12,7 @@
     "homepage": "https://github.com/cevr/firespace",
     "module": "dist/index.esm.js",
     "files": [
-        "dist",
-        "src"
+        "dist"
     ],
     "devDependencies": {
         "@types/react": "^16.8.22",
