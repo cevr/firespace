@@ -47,9 +47,8 @@ export default function useSpace<State>(path: string, getRef?: GetRef): [State, 
             update: async (id: string, item: any) => {
                 setLoading(true);
                 try {
-                    const ret = await space.update(id, item);
+                    await space.update(id, item);
                     setLoading(false);
-                    return ret;
                 } catch (error) {
                     setError(error);
                 }

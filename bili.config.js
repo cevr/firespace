@@ -2,7 +2,7 @@
 module.exports = {
     input: 'src/index.ts',
     output: {
-        format: ['esm'],
+        format: ['esm', 'cjs'],
     },
     externals: ['react', 'firebase'],
 };
