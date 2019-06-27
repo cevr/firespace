@@ -98,7 +98,10 @@ function Todo({ todo, id, space }) {
 import { useSpace } from '@cvr/firespace';
 
 function Component() {
-    const [todos, space] = useSpace('todos');
+    const [todos, space] = useSpace('todos', ref => {
+      //optionally, return custom ref
+      return ref.orderByValue()
+    });
 
     const id = await space.add({ text: 'Install it', done: false });
     await space.update(id, { done: true });
