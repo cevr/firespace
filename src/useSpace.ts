@@ -38,29 +38,29 @@ export default function useSpace<State>(path: string, getRef?: GetRef): [State, 
                 setLoading(true);
                 try {
                     const id = await space.add(item);
-                    setLoading(false);
                     return id;
                 } catch (error) {
                     setError(error);
                 }
+                setLoading(false);
             },
             update: async (id: string, item: any) => {
                 setLoading(true);
                 try {
                     await space.update(id, item);
-                    setLoading(false);
                 } catch (error) {
                     setError(error);
                 }
+                setLoading(false);
             },
             delete: async (id: string) => {
                 setLoading(true);
                 try {
                     await space.delete(id);
-                    setLoading(false);
                 } catch (error) {
                     setError(error);
                 }
+                setLoading(false);
             },
             loading,
             error,

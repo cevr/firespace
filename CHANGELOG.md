@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Tests
 
+## [0.3.2] - 2019-06-26
+
+### Fixed
+
+-   Issue that would cause the loading state to stall if an error occures when an error is thrown in any space method (add, delete, update)
+
 ## [0.3.1] - 2019-06-26
 
 ### Added
