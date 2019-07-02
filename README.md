@@ -62,7 +62,7 @@ function AddTodo({ space }) {
             setText('');
         }
     };
-    return <input value={text} onChange={e => setText(e.target.value);} placeholder="What to do next" />;
+    return <input value={text} onChange={e => setText(e.target.value)} placeholder="What to do next" />;
 }
 
 function Todos({ todos, space }) {
