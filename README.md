@@ -114,4 +114,4 @@ function Component() {
 
 ### Try it
 
-[![Edit admiring-fermi-uric7](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/admiring-fermi-uric7?fontsize=14)
+[![Edit Firespace Example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/firespace-example-uric7?fontsize=14)
