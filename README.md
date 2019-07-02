@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Firespace is for developers who want to quickly develop applications using Firebase, without all of the overhead. Currently only targeting the firebase real time database.
+Firespace is for developers who want to quickly develop applications using Firebase, without all of the overhead. Currently only targeting the firebase real time database. 1kb gzipped!
 
 ```
 npm install @cvr/firespace
